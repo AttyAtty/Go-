@@ -1,0 +1,9 @@
+services:
+  gcc:
+    build: .
+    container_name: gcc
+    volumes:
+      - .:/app
+    working_dir: /app
+    tty: true
+    command: bash -c "gcc -o test test.c && ./test"
